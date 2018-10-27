@@ -4,7 +4,7 @@ defmodule Hw do
   """
 
 
-  def hello do
-    :world
+  def createProject(name, desc, startDate, endDate) do
+    %{Name: name, Desc: desc, StDt: startDate, EnDt: endDate}
   end
 end
