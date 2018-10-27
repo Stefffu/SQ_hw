@@ -9,10 +9,14 @@ defmodule Hw do
   end
 
   def createCompany(name, desc, comps) do
-    %{Name: name, Desc: desc, Comps: comps}
+    %{Name: name, Desc: desc, Comps: comps, Projects: []}
   end
 
   def addCompetence(%{Name: name, Desc: desc, Comps: comps}, competence) do
     %{Name: name, Desc: desc, Comps: comps ++ [competence]}
+  end
+
+  def addProjectToCompany(%{Name: name, Desc: desc, Comps: comps, Projects: projects}, project) do
+    %{Name: name, Desc: desc, Comps: comps, Projects: projects ++ [project] }
   end
 end

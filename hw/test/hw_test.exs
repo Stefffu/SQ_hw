@@ -32,6 +32,6 @@ defmodule HwTest do
     end_date = "05.02.2018"
     competences = ["Software Development", "Analysis"]
     project = Hw.createProject(name, description, start_date, end_date)
-    assert %{Name: name, Desc: description, Comps: competences, Projects: [project]} = Hw.addCompany(Hw.createCompany(name, description, competences), project) 
+    assert %{Name: name, Desc: description, Comps: competences, Projects: [project]} = Hw.addProjectToCompany(Hw.createCompany(name, description, competences), project) 
   end
 end
